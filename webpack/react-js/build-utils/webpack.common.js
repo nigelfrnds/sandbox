@@ -30,6 +30,17 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(jpg|png|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000 // compress if size less than 10kb
+            }
+          }
+        ]
       }
     ]
   },
