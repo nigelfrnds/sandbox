@@ -42,7 +42,7 @@ module.exports = {
       filename: 'styles.css'
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '..', './public/index.html')
+      template: path.resolve(__dirname, '..', './src/index.html')
     }),
   ],
 };
