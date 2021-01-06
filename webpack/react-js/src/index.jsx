@@ -8,8 +8,6 @@ ReactDOM.render(
   document.getElementById('app')
 );
 
-console.log(process.env.NODE_ENV)
-
 if (process.env.NODE_ENV === 'development') {
   module.hot.accept();
 }
