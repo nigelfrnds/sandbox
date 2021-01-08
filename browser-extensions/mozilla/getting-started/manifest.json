@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Beastify",
+  "version": "1.0",
+  "description": "Adds a browser action to the toolbar.",
+  "icons": {
+    "48": "icons/beasts-48.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": "icons/beasts-32.png",
+    "default_title": "Beastify",
+    "default_popup": "popup/choose_beast.html"
+  },
+  "web_accessible_resources": [
+    "images/frog.jpg",
+    "images/turtle.jpg",
+    "images/snake.jpg"
+  ]
+}
