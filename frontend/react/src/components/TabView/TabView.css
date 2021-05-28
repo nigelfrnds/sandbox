@@ -1,0 +1,35 @@
+.tabview {
+    display: inline-flex;
+    flex-direction: column;
+    border: solid black 2px;
+}
+
+.tabview__header {
+    min-height: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+    border-bottom: solid black 2px;
+}
+
+.tabview__header > div {
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 5rem;
+    height: 3rem;
+
+    border: solid black 1px;
+}
+
+.tabview__content {
+    min-height: 10rem;
+
+    padding: 2rem;
+}

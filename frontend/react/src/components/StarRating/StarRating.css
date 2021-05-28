@@ -1,0 +1,22 @@
+.star-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 5rem;
+    width: 18rem;
+
+    border: solid black 1px;
+}
+
+.star-rating__star {
+    transition: 0.5s ease;
+    font-size: 2rem;
+    color: #777;
+}
+
+.star-rating__star:hover {
+    transition: 0.3s ease-in-out;
+    font-size: 2.5rem;
+}
