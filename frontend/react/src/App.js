@@ -1,8 +1,16 @@
-import { TabView, Tab, ChessBoard, TreeView, TreeNode, StarRating } from './components';
+import {
+  TabView,
+  Tab,
+  ChessBoard,
+  TreeView,
+  TreeNode,
+  StarRating,
+  PascalTriangle,
+} from './components';
 
 function App() {
   return (
-    <div>
+    <>
       <h1>TabView</h1>
       <TabView>
         <Tab label="Car">Has 4 wheels</Tab>
@@ -35,7 +43,10 @@ function App() {
 
       <h1>StarRating</h1>
       <StarRating />
-    </div>
+
+      <h1>PascalTriangle</h1>
+      <PascalTriangle />
+    </>
   );
 }
 
