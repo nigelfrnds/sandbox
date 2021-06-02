@@ -1,0 +1,37 @@
+version: '3'
+services:
+  mongodb:
+    image: 'mongo'
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
+  server:
+    build:
+      context: './server'
+      dockerfile: Dockerfile
+    depends_on:
+      - mongodb
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+    ports:
+      - '3001:3001'
+    environment:
+      - MONGO_USERNAME=root
+      - MONGO_PASSWORD=password
+      - MONGO_HOST=mongodb
+      - MONGO_DB=drift
+      - MONGO_PORT=27017
+      - PORT=3001
+  client:
+    build:
+      context: './client'
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
